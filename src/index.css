@@ -3,6 +3,8 @@
   --text-h: #08060d;
   --bg: #fff;
   --mint: #5eead4;
+  --text-button: #0d1117;
+  --text-button-secondary: #e6edf3;
   --border: #30363d;
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -69,37 +71,21 @@ body {
 h1,
 h2 {
   font-family: var(--heading);
-  font-weight: 500;
   color: var(--text-h);
 }
 
-h1 {
-  font-size: 56px;
-  letter-spacing: -1.68px;
-  margin: 32px 0;
-  @media (max-width: 1024px) {
-    font-size: 36px;
-    margin: 20px 0;
-  }
-}
-h2 {
-  font-size: 24px;
-  line-height: 118%;
-  letter-spacing: -0.24px;
-  margin: 0 0 8px;
-  @media (max-width: 1024px) {
-    font-size: 20px;
-  }
-}
-
 p {
-  font-family: var(--body);
   margin: 0;
 }
 
 .logo,
 label,
 .nav-items {
+  font-family: var(--mono);
+}
+
+.kickers {
+  line-height: 1.4 / normal;
   font-family: var(--mono);
 }
 
@@ -133,4 +119,29 @@ body {
 
 .accent-color {
   color: var(--mint);
+}
+
+.primary {
+  height: 48px;
+  background-color: var(--mint);
+  color: var(--text-button);
+  padding: 0px 24px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 8px;
+}
+
+.secondary {
+  height: 48px;
+  background-color: transparent;
+  color: var(--text-button-secondary);
+  padding: 0px 24px;
+  font-family: var(--mono);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  border-radius: 8px;
+  border: 1px solid #30363d;
 }

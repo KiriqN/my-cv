@@ -2,6 +2,18 @@
 @import "@fontsource/space-grotesk";
 @import "@fontsource/jetbrains-mono";
 @import "@fontsource/ibm-plex-sans";
+@import "@fontsource/space-grotesk/500.css";
+@import "@fontsource/space-grotesk/700.css";
+@import "@fontsource/jetbrains-mono/400.css";
+@import "@fontsource/jetbrains-mono/600.css";
+@import "@fontsource/ibm-plex-sans/400.css";
+@import "@fontsource/ibm-plex-sans/600.css";
+
+@theme {
+  --font-mono: "JetBrains Mono", monospace;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+}
 
 .counter {
   font-size: 16px;

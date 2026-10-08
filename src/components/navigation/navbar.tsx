@@ -1,11 +1,11 @@
 import React from "react";
 import data from "../../data/cv.json";
-import Workbar from "./workbar";
+import Workbar from "./Workbar.tsx";
 
 function navbar() {
   return (
     <header>
-      <nav className="flex items-center p-6 justify-between">
+      <nav className="flex items-center py-6 justify-between">
         <div className="logo text-[14px] md:text-[16px]">
           {data.meta.logo.name}
           <span className="accent-color">{data.meta.logo.suffix}</span>
