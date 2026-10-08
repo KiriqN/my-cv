@@ -1,0 +1,236 @@
+{
+  "meta": {
+    "siteTitle": "Jared Laubscher — Front-end Developer",
+    "logo": { "name": "jared", "suffix": ".dev" },
+    "available": true,
+    "availableLabel": "available for work",
+    "footerNote": "built with React + Tailwind · © 2026 Jared Laubscher"
+  },
+
+  "nav": [
+    { "id": "terminal", "label": "01. terminal" },
+    { "id": "work", "label": "02. git log" },
+    { "id": "education", "label": "03. education" },
+    { "id": "contact", "label": "04. contact" }
+  ],
+
+  "hero": {
+    "kicker": "$ whoami",
+    "name": "Jared Laubscher",
+    "roles": [
+      "front-end developer.",
+      "React & Next.js builder.",
+      "Astro + Tailwind enthusiast.",
+      "WordPress → modern web person."
+    ],
+    "intro": "6 years building for the web, from custom PHP WordPress themes to Astro, Next.js and Azure Front Door. Based in Cape Town and looking for a dev-focused team to grow with.",
+    "buttons": [
+      {
+        "label": "try the terminal ↓",
+        "href": "#terminal",
+        "variant": "primary"
+      },
+      {
+        "label": "download cv.pdf",
+        "href": "/Jared_Laubscher_CV.pdf",
+        "variant": "secondary"
+      }
+    ]
+  },
+
+  "terminal": {
+    "title": "jared@cape-town: ~",
+    "prompt": "jared@cape-town:~$",
+    "welcome": [
+      { "text": "Welcome to jared.dev v1.0.0", "kind": "accent" },
+      { "text": "Type 'help' to see available commands.", "kind": "out" }
+    ],
+    "quickCommands": [
+      "help",
+      "about",
+      "skills",
+      "experience",
+      "contact",
+      "clear"
+    ],
+    "commands": {
+      "help": [
+        { "text": "available commands:", "kind": "accent" },
+        { "text": "  whoami      who is this guy", "kind": "out" },
+        { "text": "  about       professional summary", "kind": "out" },
+        { "text": "  skills      tech stack", "kind": "out" },
+        { "text": "  experience  work history", "kind": "out" },
+        { "text": "  education   qualifications", "kind": "out" },
+        { "text": "  contact     get in touch", "kind": "out" },
+        { "text": "  clear       clear the screen", "kind": "out" }
+      ],
+      "whoami": [
+        {
+          "text": "Jared Laubscher — front-end developer, Cape Town, ZA.",
+          "kind": "out"
+        }
+      ],
+      "about": [
+        {
+          "text": "6 years in web dev. WordPress + custom PHP themes,",
+          "kind": "out"
+        },
+        {
+          "text": "Astro, Tailwind, Next.js/React and Azure Front Door.",
+          "kind": "out"
+        },
+        {
+          "text": "Looking for a dev-focused team to keep learning with.",
+          "kind": "out"
+        }
+      ],
+      "sudo hire jared": [
+        { "text": "[sudo] access granted ✓", "kind": "accent" },
+        {
+          "text": "Great choice. Email jared@inboundmarketing.co.za",
+          "kind": "out"
+        }
+      ]
+    },
+    "notFound": "command not found: {cmd}. Try 'help'."
+  },
+
+  "neofetch": {
+    "user": "jared@laubscher",
+    "initials": "JL",
+    "rows": [
+      { "key": "OS", "value": "Cape Town, ZA" },
+      { "key": "Uptime", "value": "6 years in web dev" },
+      { "key": "Host", "value": "CyberIAM (2023 →)" },
+      { "key": "Shell", "value": "TypeScript" },
+      { "key": "Packages", "value": "React, Next.js, Astro, Tailwind" },
+      { "key": "Backend", "value": "PHP, WordPress, Laravel" },
+      { "key": "Cloud", "value": "Azure Front Door" },
+      { "key": "Hobbies", "value": "gym, fishing, games" }
+    ]
+  },
+
+  "skills": {
+    "frontend": [
+      "React",
+      "Next.js",
+      "Astro",
+      "TypeScript",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML / CSS"
+    ],
+    "backend": ["PHP", "WordPress", "Laravel", "Joomla"],
+    "cloud": ["Azure", "Azure Front Door", "Technical SEO"]
+  },
+
+  "stackSlider": [
+    "React",
+    "Next.js",
+    "Astro",
+    "TypeScript",
+    "Tailwind CSS",
+    "PHP",
+    "WordPress",
+    "Laravel",
+    "Azure Front Door",
+    "SEO"
+  ],
+
+  "experience": {
+    "command": "$ git log --career",
+    "title": "Where I've worked",
+    "jobs": [
+      {
+        "id": "cyberiam",
+        "commit": "4f2c9a1",
+        "branch": "HEAD -> cyberiam",
+        "current": true,
+        "role": "Web Developer → Technical Lead",
+        "company": "CyberIAM Holdings Limited",
+        "start": "Apr 2023",
+        "end": "present",
+        "summary": "Own the end-to-end lifecycle of enterprise web apps and infrastructure, bridging marketing campaigns and technical execution.",
+        "changes": [
+          {
+            "type": "add",
+            "text": "Sites & client portals in Astro, TS, React"
+          },
+          {
+            "type": "add",
+            "text": "Azure Front Door: CDN, edge security, routing"
+          },
+          { "type": "add", "text": "Custom PHP themes" },
+          { "type": "remove", "text": "Restrictive page builders" },
+          { "type": "add", "text": "Accessible UI in React + Tailwind" },
+          { "type": "add", "text": "Root-level SEO with marketing" }
+        ]
+      },
+      {
+        "id": "freelance",
+        "commit": "9b71e0d",
+        "branch": "freelance",
+        "current": false,
+        "role": "Freelance Web Developer",
+        "company": "Self-employed",
+        "start": "Mar 2020",
+        "end": "present",
+        "summary": "A client base built through word of mouth, starting during university.",
+        "changes": [
+          {
+            "type": "add",
+            "text": "Client sites in HTML/CSS, WordPress, Joomla, Laravel"
+          },
+          {
+            "type": "add",
+            "text": "Maintenance & bug fixing on WordPress PHP back ends"
+          },
+          {
+            "type": "add",
+            "text": "JS + PHP lead pipeline for Old Mutual LRP referral system"
+          }
+        ]
+      }
+    ]
+  },
+
+  "education": {
+    "command": "$ ls ~/education",
+    "title": "Education",
+    "items": [
+      {
+        "folder": "bcis/",
+        "start": "2020",
+        "end": "2023",
+        "title": "BCIS, Vega School Cape Town",
+        "description": "Front-end, back-end, database design, open-source dev, 3D & graphic design."
+      },
+      {
+        "folder": "nqf5/",
+        "start": "2019",
+        "end": "2020",
+        "title": "NC: IT Systems Development (NQF 5), CTU",
+        "description": "C# / ASP.NET MVC, Unity, Java fundamentals."
+      },
+      {
+        "folder": "diploma/",
+        "start": "2018",
+        "end": "2019",
+        "title": "Web Developer Diploma, CTU",
+        "description": "HTML, CSS, JavaScript, WordPress, Photoshop."
+      }
+    ]
+  },
+
+  "contact": {
+    "command": "$ sudo hire jared",
+    "title": "Let's build something.",
+    "text": "Open to front-end roles in Cape Town or remote. References available on request.",
+    "email": "jared@inboundmarketing.co.za",
+    "phone": "079 617 4432",
+    "phoneHref": "tel:+27796174432",
+    "location": "Cape Town, South Africa"
+  },
+
+  "hobbies": ["Gym", "Fishing", "Technology", "Video Games"]
+}

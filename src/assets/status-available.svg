@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" role="img" aria-label="Available for work">
+  <style>
+    .ring {
+      fill: #5EEAD4;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pulse 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+    }
+    .core { fill: #5EEAD4; }
+    @keyframes pulse {
+      from { transform: scale(1);   opacity: 0.6; }
+      to   { transform: scale(2.5); opacity: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .ring { animation: none; opacity: 0; }
+    }
+  </style>
+  <circle class="ring" cx="10" cy="10" r="4"/>
+  <circle class="core" cx="10" cy="10" r="4"/>
+</svg>
