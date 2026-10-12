@@ -1,8 +1,8 @@
-import React from "react";
 import Button from "../buttons/Button";
+import TypeWriter from "./TypeWriter";
 import data from "../../data/cv.json";
 
-function hero() {
+function Hero() {
   return (
     <section className="mx-auto w-full">
       <div className="flex flex-col justify-start text-left gap-6 leading-none  ">
@@ -13,17 +13,14 @@ function hero() {
           {data.hero.name}
         </h1>
 
-        <p className="flex-row font-mono text-[20px] md:text-[30px] leading-[1.4] text-[#C9D1D9]">
-          <span className=""> {`>`} </span>
-          <span> front-end developer </span>
-        </p>
+        <TypeWriter roles={data.hero.roles}></TypeWriter>
 
         <p className="font-body text-[16px] md:text-[18px] md:max-w-175 leading-[1.7]">
           {data.hero.intro}
         </p>
 
         <div className="flex flex-row gap-6">
-          {...data.hero.buttons.map((user) => (
+          {data.hero.buttons.map((user) => (
             <Button
               key={user.label}
               buttonClass={user.variant}
@@ -36,4 +33,4 @@ function hero() {
   );
 }
 
-export default hero;
+export default Hero;

@@ -145,3 +145,22 @@ body {
   border-radius: 8px;
   border: 1px solid #30363d;
 }
+
+.typewriter-border {
+  border-right: 0.5em solid;
+  animation-name: typeWriterCursor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(1, end);
+}
+
+@keyframes typeWriterCursor {
+  0%,
+  100% {
+    border-right-color: var(--mint);
+  }
+
+  50% {
+    border-right-color: transparent;
+  }
+}
