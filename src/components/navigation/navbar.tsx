@@ -8,7 +8,10 @@ function navbar() {
       <nav className="flex items-center py-6 justify-between">
         <div className="logo text-[14px] md:text-[16px]">
           {data.meta.logo.name}
-          <span className="accent-color">{data.meta.logo.suffix}</span>
+          <span className="accent-color">
+            {data.meta.logo.suffix}
+            <span className="logo-cursor font-bold">_</span>
+          </span>
         </div>
 
         <div className="nav-items">
