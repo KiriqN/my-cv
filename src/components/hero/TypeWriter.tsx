@@ -9,7 +9,7 @@ function TypeWriter(props: TypeWriterProps) {
 
   return (
     <p className="font-mono text-[20px] md:text-[30px] leading-[1.4] text-[#C9D1D9]">
-      <span>{"> "}</span>
+      <span className="mr-[1ch]">{">"}</span>
       <span className="typewriter-border">{text}</span>
     </p>
   );

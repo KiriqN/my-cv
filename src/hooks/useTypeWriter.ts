@@ -5,11 +5,16 @@ function useTypeWriter(roles: string[]) {
   const [charCount, setCharCount] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
+  const typingSpeed = 100;
+  const deletingSpeed = 50;
+  const pauseSpeed = 500;
+  const finishTypeSpeed = 2000;
+
   useEffect(() => {
     if (charCount < roles[roleIndex].length && isDeleting === false) {
       const typeTimer = setTimeout(() => {
         setCharCount((i) => i + 1);
-      }, 100);
+      }, typingSpeed);
 
       return () => clearTimeout(typeTimer);
     }
@@ -17,7 +22,7 @@ function useTypeWriter(roles: string[]) {
     if (isDeleting === true && charCount > 0) {
       const deleteTimer = setTimeout(() => {
         setCharCount((i) => i - 1);
-      }, 50);
+      }, deletingSpeed);
       return () => clearTimeout(deleteTimer);
     }
 
@@ -25,14 +30,14 @@ function useTypeWriter(roles: string[]) {
       const pauseTimer = setTimeout(() => {
         setIsDeleting(false);
         setRoleIndex((prev) => (prev + 1) % roles.length);
-      }, 1000);
+      }, pauseSpeed);
 
       return () => clearTimeout(pauseTimer);
     }
 
     const timerId = setTimeout(() => {
       setIsDeleting(true);
-    }, 2000);
+    }, finishTypeSpeed);
     return () => {
       clearTimeout(timerId);
     };
