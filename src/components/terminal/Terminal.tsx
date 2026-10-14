@@ -1,6 +1,11 @@
 import data from "../../data/cv.json";
+import { useTerminal } from "../../hooks/useTerminal";
 
 function Terminal() {
+  const { lines, input, setInput, runCommand } = useTerminal(
+    data.terminal.welcome,
+  );
+
   return (
     <div className="border border-[#30363D] rounded-t-[14px] rounded-b-[14px] bg-[#0A0D12] overflow-hidden">
       <div className=" bg-[#161B22] rounded-b-none py-3 flex items-center px-4">
@@ -14,7 +19,7 @@ function Terminal() {
         </p>
       </div>
       <div className="min-h-85 bg-transparent text-left p-5 flex flex-col gap-1">
-        {data.terminal.welcome.map((message) => (
+        {lines.map((message) => (
           <p
             className={`font-mono text-[13px] md:text-[14px] ${message.kind}`}
             key={message.text}
@@ -37,6 +42,13 @@ function Terminal() {
             placeholder="type help"
             spellCheck={false}
             autoComplete="off"
+            value={input}
+            onChange={(event) => setInput(event.target.value)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter") {
+                runCommand(input);
+              }
+            }}
           ></input>
         </div>
       </div>
