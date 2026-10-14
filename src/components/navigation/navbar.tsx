@@ -6,7 +6,7 @@ function navbar() {
   return (
     <header>
       <nav className="flex items-center py-6 justify-between">
-        <div className="logo text-[14px] md:text-[16px]">
+        <div className="logo text-[14px] text-[#E6EDF3] md:text-[16px]">
           {data.meta.logo.name}
           <span className="accent-color">
             {data.meta.logo.suffix}

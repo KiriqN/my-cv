@@ -6,7 +6,7 @@ import hiredImage from "../../assets/status-hired.svg";
 function workbar() {
   return (
     <div>
-      <span className=" flex border border-[#30363D] rounded-2xl py-1 px-2">
+      <span className=" flex border text-[#E6EDF3] border-[#30363D] rounded-2xl py-1 px-2">
         {workStatus()}
         {data.meta.availableLabel}
       </span>
