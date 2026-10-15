@@ -5,16 +5,27 @@ export interface TerminalLine {
   kind: string;
 }
 
-export function useTerminal(welcome: TerminalLine[]) {
+export function useTerminal(
+  welcome: TerminalLine[],
+  commands: Record<string, TerminalLine[]>,
+) {
   const [lines, setLines] = useState(welcome);
   const [input, setInput] = useState("");
 
   function runCommand(inputCommand: string) {
-    const echoLine = { text: inputCommand, kind: "echo" };
+    const cleanInput = inputCommand.trim().toLowerCase();
 
-    setLines((prev) => [...prev, echoLine]);
+    const commandKey = commands[cleanInput] ?? [];
 
-    return inputCommand;
+    console.log(commandKey);
+
+    const echoLine = {
+      text: `jared@cape-town:~$ ${inputCommand}`,
+      kind: "echo",
+    };
+
+    setLines((prev) => [...prev, echoLine, ...commandKey]);
+    setInput("");
   }
 
   return { lines, input, setInput, runCommand };
