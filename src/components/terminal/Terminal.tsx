@@ -59,6 +59,7 @@ function Terminal() {
           <button
             className="font-mono cursor-pointer border text-[13px] text-[#C9D1D9] px-3.5 min-h-9 bg-[#161B22] rounded-md border-[#30363D] transform transition-[background-color, color] duration-200 hover:bg-(--mint) hover:text-[#0D1117]"
             key={buttons}
+            onClick={() => runCommand(buttons)}
           >
             {buttons}
           </button>
