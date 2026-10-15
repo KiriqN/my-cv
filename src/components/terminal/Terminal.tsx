@@ -5,6 +5,7 @@ function Terminal() {
   const { lines, input, setInput, runCommand } = useTerminal(
     data.terminal.welcome,
     data.terminal.commands,
+    data.terminal.notFound,
   );
 
   return (
@@ -22,7 +23,7 @@ function Terminal() {
       <div className="min-h-85 bg-transparent text-left p-5 flex flex-col gap-1">
         {lines.map((message) => (
           <p
-            className={`font-mono text-[13px] whitespace-pre-wrap md:text-[14px] ${message.kind}`}
+            className={`font-mono text-[13px] pl-[2ch] indent-[-2ch] whitespace-pre-wrap md:text-[14px] ${message.kind}`}
             key={message.text}
           >
             {message.text}

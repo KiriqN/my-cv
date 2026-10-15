@@ -64,11 +64,62 @@
         { "text": "  contact     get in touch", "kind": "out" },
         { "text": "  clear       clear the screen", "kind": "out" }
       ],
+
+      "clear": [
+        {
+          "text": "clear",
+          "kind": "out"
+        }
+      ],
+
+      "err": [
+        {
+          "text": "notFound: command not found: {cmd}. Try 'help'.",
+          "kind": "err"
+        }
+      ],
+
       "whoami": [
         {
           "text": "Jared Laubscher — front-end developer, Cape Town, ZA.",
           "kind": "out"
         }
+      ],
+
+      "skills": [
+        { "text": "frontend", "kind": "accent" },
+        {
+          "text": "  React · Next.js · Astro · TypeScript · JavaScript · Tailwind CSS · HTML/CSS",
+          "kind": "out"
+        },
+        { "text": "backend", "kind": "accent" },
+        { "text": "  PHP · WordPress · Laravel · Joomla", "kind": "out" },
+        { "text": "cloud & seo", "kind": "accent" },
+        { "text": "  Azure · Azure Front Door · Technical SEO", "kind": "out" }
+      ],
+      "experience": [
+        {
+          "text": "2023 → now   Web Developer → Technical Lead @ CyberIAM",
+          "kind": "out"
+        },
+        { "text": "2020 → now   Freelance Web Developer", "kind": "out" },
+        {
+          "text": "Scroll down to the git log for the full details.",
+          "kind": "accent"
+        }
+      ],
+      "education": [
+        { "text": "2020–2023   BCIS, Vega School Cape Town", "kind": "out" },
+        {
+          "text": "2019–2020   NC: IT Systems Development (NQF 5), CTU",
+          "kind": "out"
+        },
+        { "text": "2018–2019   Web Developer Diploma, CTU", "kind": "out" }
+      ],
+      "contact": [
+        { "text": "email   jared@inboundmarketing.co.za", "kind": "out" },
+        { "text": "phone   079 617 4432", "kind": "out" },
+        { "text": "based   Cape Town, South Africa", "kind": "out" }
       ],
       "about": [
         {

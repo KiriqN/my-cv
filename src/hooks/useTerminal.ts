@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export interface TerminalLine {
   text: string;
@@ -8,6 +8,7 @@ export interface TerminalLine {
 export function useTerminal(
   welcome: TerminalLine[],
   commands: Record<string, TerminalLine[]>,
+  error: string,
 ) {
   const [lines, setLines] = useState(welcome);
   const [input, setInput] = useState("");
@@ -15,14 +16,31 @@ export function useTerminal(
   function runCommand(inputCommand: string) {
     const cleanInput = inputCommand.trim().toLowerCase();
 
-    const commandKey = commands[cleanInput] ?? [];
-
-    console.log(commandKey);
-
     const echoLine = {
       text: `jared@cape-town:~$ ${inputCommand}`,
       kind: "echo",
     };
+
+    const errLine = {
+      text: `${error}`,
+      kind: "err",
+    };
+
+    if (cleanInput === "clear") {
+      setLines([]);
+      setInput("");
+      return;
+    }
+
+    const commandKey = commands[cleanInput] ?? [];
+
+    if (commandKey.length <= 0) {
+      setLines((prev) => [...prev, echoLine, errLine, ...commandKey]);
+      setInput("");
+      return;
+    }
+
+    console.log(commandKey);
 
     setLines((prev) => [...prev, echoLine, ...commandKey]);
     setInput("");
