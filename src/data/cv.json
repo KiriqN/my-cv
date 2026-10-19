@@ -147,6 +147,7 @@
   },
 
   "neofetch": {
+    "kicker": "$ neofetch",
     "user": "jared@laubscher",
     "initials": "JL",
     "rows": [

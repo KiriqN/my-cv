@@ -22,7 +22,7 @@ export function useTerminal(
     };
 
     const errLine = {
-      text: `${error}`,
+      text: `${error.replace(/\{cmd\}/g, inputCommand)}`,
       kind: "err",
     };
 
