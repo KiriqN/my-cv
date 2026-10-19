@@ -1,29 +1,32 @@
 import React from "react";
 import data from "../../data/cv.json";
 import Workbar from "./Workbar.tsx";
+import Container from "../container/Container.tsx";
 
 function navbar() {
   return (
-    <header>
-      <nav className="flex items-center py-6 justify-between">
-        <div className="logo text-[14px] text-[#E6EDF3] md:text-[16px]">
-          {data.meta.logo.name}
-          <span className="accent-color">
-            {data.meta.logo.suffix}
-            <span className="logo-cursor font-bold">_</span>
-          </span>
-        </div>
+    <Container>
+      <header>
+        <nav className="flex items-center py-6 justify-between">
+          <div className="logo text-[14px] text-[#E6EDF3] md:text-[16px]">
+            {data.meta.logo.name}
+            <span className="accent-color">
+              {data.meta.logo.suffix}
+              <span className="logo-cursor font-bold">_</span>
+            </span>
+          </div>
 
-        <div className="nav-items">
-          <ul className="flex items-center gap-8 text-[14px]">
-            {data.nav.map((navItems) => (
-              <li key={navItems.id}>{navItems.label}</li>
-            ))}
-            <Workbar />
-          </ul>
-        </div>
-      </nav>
-    </header>
+          <div className="nav-items">
+            <ul className="flex items-center gap-8 text-[14px]">
+              {data.nav.map((navItems) => (
+                <li key={navItems.id}>{navItems.label}</li>
+              ))}
+              <Workbar />
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </Container>
   );
 }
 
