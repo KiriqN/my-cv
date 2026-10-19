@@ -187,3 +187,26 @@ body {
     border-right-color: transparent;
   }
 }
+
+@keyframes slider-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.slider-track {
+  animation: slider-scroll 28s linear infinite;
+}
+
+.slider-track:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slider-track {
+    animation: none;
+  }
+}
